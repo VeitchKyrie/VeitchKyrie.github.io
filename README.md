@@ -1,6 +1,6 @@
 
 
-![](https://raw.githubusercontent.com/VeitchKyrie/.github.io/master/img/readme-home.jpg)
+![](https://raw.githubusercontent.com/VeitchKyrie/VeitchKyrie.github.io/master/img/readme-home.jpg)
 
 [![GitHub issues](https://img.shields.io/github/issues/VeitchKyrie/VeitchKyrie.github.io.svg?style=flat)](https://github.com/VeitchKyrie/VeitchKyrie.github.io/issues)
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/home-assistant/home-assistant-iOS/blob/master/LICENSE)
