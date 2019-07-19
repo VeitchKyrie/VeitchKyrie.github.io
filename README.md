@@ -86,10 +86,6 @@ tags:
 ```
 
 ### 侧边栏
-
-看右边:
-![](https://raw.githubusercontent.com/VeitchKyrie/VeitchKyrie.github.io/master/img/portrait.jpg)
-
 设置是在 `_config.yml`文件里面的`Sidebar settings`那块。
 
 ```
@@ -209,8 +205,7 @@ disqus_username: VeitchKyrie
 缺点：配置比较繁琐，每篇文章的评论都需要初始化。
 
 **使用：**
-参考这篇文章：[《为博客添加 Gitalk 评论插件》] //: (http://qiubaiying.top/2017/12/19/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0-Gitalk-%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/)
-
+参考这篇文章：[《为博客添加 Gitalk 评论插件》]
 ### Analytics
 
 网站分析，现在支持百度统计和Google Analytics。需要去官方网站注册一下，然后将返回的code贴在下面：
