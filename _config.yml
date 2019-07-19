@@ -5,7 +5,7 @@ header-img: img/post-bg-desk.jpg
 email: 648974975@qq.com
 description: "Seize today and place no trust on tomorrow."
 keyword: "Veitch Kyrie Blog, qiyu's blog, wuqiyu, linux/unix, TCP/IP"
-url: "http://VeitchKryie.github.io"          # your host, for absolute URL
+url: "http://VeitchKyrie.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/VeitchKyrie/VeitchKyrie.github.io.git" # you code repository
 
