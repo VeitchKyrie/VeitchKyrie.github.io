@@ -65,8 +65,8 @@ gitalk:
   clientID: 8ab4919779f2d9a9a2e1                            #生成的clientID
   clientSecret: 227486d94a933a911b7424372f5c9a017181cc8f    #生成的clientSecret
   repo: VeitchKyrie.github.io    #仓库名称
-  owner: Veitch Kyrie    #github用户名
-  admin: Veitch Kyrie
+  owner: VeitchKyrie    #github用户名
+  admin: VeitchKyrie
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
