@@ -14,7 +14,7 @@ tags:
 
 ## 1. 背景	
 
-​	**在项目中，今天遇到客户给的xml文本和产品界面显示不一致的问题，这些问题往往都是因为开发人员对文本进行更新时，采用手动拷贝填写等方法，一时疏忽所造成的，并且每当客户更新xml文档，开发人员就要重新手动进行更新，这种方法是十分低效的，基于此，可采用直接从xml读取文本的方法，这样不但可以避免错误显示的发生，还能大大提高工作效率，每次客户更新xml，只需要导入xml即可，不需要做任何代码改动。**
+​	**在项目中，今天遇到客户给的`xml`文本和产品界面显示不一致的问题，这些问题往往都是因为开发人员对文本进行更新时，采用手动拷贝填写等方法，一时疏忽所造成的，并且每当客户更新`xml`文档，开发人员就要重新手动进行更新，这种方法是十分低效的，基于此，可采用直接从`xml`读取文本的方法，这样不但可以避免错误显示的发生，还能大大提高工作效率，每次客户更新`xml`，只需要导入`xml`即可，不需要做任何代码改动。**
 
 
 
@@ -22,9 +22,49 @@ tags:
 
 **`tinyXML2` 是一款非常便捷高效的第三方操作xml文件的C++ XML文件解析库，可以非常方便的移植应用到现有的项目之中。非常适合存储简单数据，配置文件，对象序列化等数据量不是很大的操作。`tinyXML2`可以从[官网](https://sourceforge.net/projects/tinyxml/)去下载，也可以去[github](https://github.com/leethomason/tinyxml2)下载源码编译。**
 
-## 3. 网上的简单例程
 
-**假设，我们在一个视觉项目中使用多个相机，那么每个相机将会有`ID`、 `IP`地址、曝光时间、触发模式等属性。所以我们就想有类似下面的配置文件：**
+
+## 3. `TinyXml-2` 的结构简介
+
+**`TiXmlBase` 是所有类的基类，`TiXmlNode`、`TiXmlAttribute`两个类都继承来自 `TiXmlBase` 类，其中` TiXmlNode` 类指的是所有被<…>…<…/>包括的内容，而`xml`中的节点又具体分为以下几方面内容，分别是声明、注释、节点以及节点间的文本，因此在 `TiXmlNode `的基础上又衍生出这几个类 `TiXmlComment`、`TiXmlDeclaration`、`TiXmlDocument`、`TiXmlElement`、`TiXmlText`、`TiXmlUnknown`，分别用来指明具体是` xml `中的哪一部分。`TiXmlAttribute` 类不同于` TiXmlNode`，它指的是在尖括号里面的内容，像<… *=…>，其中*就是一个属性。**
+
+### 3.1 `TinyXml-2` 结构图
+
+![TinyXml2结构图](https://veitchkyrie.github.io/img/TiXmlTree.png)
+
+### 3.2 `TinyXml-2` 结构说明
+
+**这块我具体用一个`xml`文档说明一下，内容如下：**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<LangDef langCode="0407" xsi:noNamespaceSchemaLocation="HMILinguist_Texts.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <LangID ID="LANG.PO_CONFIRM_ONLINE_SERVICE_TETHERING_ON.OK.BTN_*" Text="OK"/>
+    <LangID ID="LANG.SWDL_MAIN.BTN_SW_Update.text" Text="Software update"/>
+    <LangID ID="AM_Monitor_Fieldstrength_Value_Entry" Text="%1 dBµV"/>
+    <LangID ID="FM_Monitor_Fieldstrength_Value_Entry" Text="%1 dBµV"/>
+    <LangID ID="LANG.APPCONNECT_DOMAIN_ERROR.Info.text" Text="%1\nis currently not available."/>
+```
+
+**`TiXmlDeclaration `指的是<?xml version="1.0" encoding="UTF-8"?>**
+
+**`TiXmlComment` 指的是注释<!-- TiXmlComment -->**
+
+**`TiXmlDocument` 指的是整个`xml`文档，**
+
+**`TiXmlElement `指的是<LangDef>、<LangID>等等这些节点，**
+
+**`TiXmlText` 指的是‘*LANG.SWDL_MAIN.BTN_SW_Update.text’*、‘*Software update*’这些夹在`TiXmlElement`之间的文本内容**
+
+**`TiXmlAttribute` 指的是*<?xml version=”1.0″ encoding=”UTF-8″?>*节点中version、encoding等**
+
+**除此之外就是 `TiXmlUnknown`。**
+
+
+
+## 4. 网上的简单教学例程
+
+**假设，在一个视觉项目中需要使用多个相机，那么每个相机将会有`ID`、 `IP`地址、曝光时间、触发模式等属性。所以我们就想有类似下面的配置文件：**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -59,7 +99,7 @@ tags:
 
 **针对以上情况，我们得写一个怎么去读，怎么去写，怎么去修改属性的代码。下面将附上测试代码，希望读者通过调试来掌握`tinyXML2`的调用方法。**
 
-```C++
+```c++
 
 /**
 * 开发环境: VS2015 + TinyXML2 6.0.2 + Windows 10
@@ -245,9 +285,9 @@ void test_CameraXML()
 
 
 
-## 4. 个人实际项目应用实例
+## 5. 个人实际项目应用实例
 
-### 4.1 xml文本实例
+### 5.1 `xml`文本实例
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -261,9 +301,9 @@ void test_CameraXML()
     <LangID ID="LANG.APPCONNECT_INFO_VIEW.BaiduCarLifeHint.text" Text="CarLife allows the secure use of a phone in this car. The connection can be established via USB or wireless. Please install the CarLife App from the App-Store on your phone. Please mind any necessary confirmations on your phone."/>
 ```
 
-### 4.2 个人实际应用代码
+### 5.2 个人实际应用代码
 
-```C++
+```c++
 /***********************
 * file:TranslateXML.cpp
 * function: prase xml file
@@ -339,7 +379,14 @@ void TranslateXML::parse(const std::string & filepath,
 }
 ```
 
-```cpp
+```c++
+/***********************
+* file:TranslateXML.hpp
+* function: attribution/funcitons declaration
+* author: Veitch Kyrie
+* Date: 2019-07-23
+***********************/
+
 #ifndef _TRANSLATE_XML_HPP_
 #define _TRANSLATE_XML_HPP_
 
@@ -370,7 +417,9 @@ private:
 
 
 
-## 5. 结语：**通过以上代码的应用，可以很好的提高代码的兼容性和移植性，减少了不必要的代码改动和错误**
+## 6. 结语
+
+​	**通过以上代码的应用，可以很好的提高代码的兼容性和移植性，减少了不必要的代码改动和错误。在此给大家提供参考。**
 
  
 
