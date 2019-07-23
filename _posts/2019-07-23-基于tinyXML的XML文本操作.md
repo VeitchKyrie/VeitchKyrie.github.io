@@ -4,6 +4,7 @@ title:      基于tinyXML2的XML文本操作
 subtitle:   采用直接从xml读取文本的方法，不但可以避免错误显示的发生，还大大提高工作效率，实现该方法后,只需导入客户更新的xml即可完成文本的更新显示，不需要做任何代码改动
 date:       2019-07-23
 author:     VK
+header-img: img/post_bg_tinyxml.png
 catalog: true
 tags:
     - C++
@@ -46,17 +47,17 @@ tags:
     <LangID ID="LANG.APPCONNECT_DOMAIN_ERROR.Info.text" Text="%1\nis currently not available."/>
 ```
 
-**`TiXmlDeclaration `指的是<?xml version="1.0" encoding="UTF-8"?>**
+**`TiXmlDeclaration `指的是 `<?xml version="1.0" encoding="UTF-8"?>`**
 
-**`TiXmlComment` 指的是注释<!-- TiXmlComment -->**
+**`TiXmlComment` 指的是注释`<!-- TiXmlComment -->`**
 
-**`TiXmlDocument` 指的是整个`xml`文档，**
+**`TiXmlDocument` 指的是整个`xml`文档**
 
-**`TiXmlElement `指的是<LangDef>、<LangID>等等这些节点，**
+**`TiXmlElement `指的是`<LangDef>`、`<LangID>`这些节点**
 
-**`TiXmlText` 指的是‘*LANG.SWDL_MAIN.BTN_SW_Update.text’*、‘*Software update*’这些夹在`TiXmlElement`之间的文本内容**
+**`TiXmlText` 指的是`LANG.SWDL_MAIN.BTN_SW_Update.text`、`Software update`这些夹在`TiXmlElement`之间的文本内容**
 
-**`TiXmlAttribute` 指的是*<?xml version=”1.0″ encoding=”UTF-8″?>*节点中version、encoding等**
+**`TiXmlAttribute` 指的是`<?xml version=”1.0″ encoding=”UTF-8″?>`节点中version、encoding等**
 
 **除此之外就是 `TiXmlUnknown`。**
 
