@@ -4,7 +4,7 @@ title:      基于tinyXML2的XML文本操作
 subtitle:   采用直接从xml读取文本的方法，不但可以避免错误显示的发生，还大大提高工作效率，实现该方法后,只需导入客户更新的xml即可完成文本的更新显示，不需要做任何代码改动
 date:       2019-07-23
 author:     VK
-header-img: img/post_bg_tinyxml.png
+<!--header-img: img/post_bg_tinyxml.png-->
 catalog: true
 tags:
     - C++
