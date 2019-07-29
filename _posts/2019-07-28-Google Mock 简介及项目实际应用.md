@@ -35,8 +35,7 @@ Mock，更确切地说应该是Mock Object。它究竟是什么？它有什么�
 - [Cheat Sheet](http://code.google.com/p/googlemock/wiki/CheatSheet)
 - [Cheat Sheet中文翻译](http://www.cppprog.com/2009/0410/103.html)
 - [Cookbook](http://code.google.com/p/googlemock/wiki/CookBook)
-- <https://github.com/google/googletest/blob/master/googlemock/docs/ForDummies.md>
-- https://github.com/dmonopoly/gtest-cmake-example
+- [gtest-cmake-example]<https://github.com/dmonopoly/gtest-cmake-example>
 
 # Google Mock使用
 
