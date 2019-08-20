@@ -52,7 +52,7 @@ E: Unable to locate package libglut-dev
 
 或者执行如下命令[libfreenect](https://github.com/OpenKinect/libfreenect)
 
-![libfreenect](img/libfreenect.jpg)
+![libfreenect](https://veitchkyrie.github.io/img/libfreenect.jpg)
 
 ## 测试
 
@@ -110,3 +110,10 @@ $ gcc -o test test.c -lGL -lGLU -lglut
 执行：
 
 ```shell
+$ ./test
+```
+
+
+
+---
+
