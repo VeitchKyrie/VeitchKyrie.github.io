@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      遇到的问题---could not read symbols: Archive has no index; run ranlib to add one
+title:      遇到的问题之could not read symbols: Archive has no index
 subtitle:   问题分析及解决
 date:       2019-12-05
 author:     VK
