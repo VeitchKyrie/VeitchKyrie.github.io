@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      遇到的问题---Your dtc is too old, please upgrade to dtc 1.4 or newer
+title:      遇到的问题之Your dtc is too old, please upgrade to dtc 1.4 or newer
 subtitle:   遇到问题分析及解决
 date:       2019-12-01
 author:     VK
