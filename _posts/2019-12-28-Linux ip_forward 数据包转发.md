@@ -1,3 +1,14 @@
+---
+layout:     post
+title:      Linux ip_forward 数据包转发
+subtitle:   网络数据包转发
+date:       2019-12-28
+author:     VK
+catalog: true
+tags:
+    - 网络
+---
+
 # Linux ip_forward 数据包转发
 
 出于安全考虑，Linux系统默认是禁止数据包转发的。所谓转发即当主机拥有多于一块的网卡时，其中一块收到数据包，根据数据包的目的ip地址将数据包发往本机另一块网卡，该网卡根据路由表继续发送数据包。这通常是路由器所要实现的功能。
